@@ -10,10 +10,12 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 public class SfgDiApplication {
 
-	private String nikola = "Nikola";
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
+
+
+		System.out.println();
 
 		PetController petController = ctx.getBean("petController", PetController.class);
 		System.out.println("--- The Best Pet is ---");
@@ -40,11 +42,6 @@ public class SfgDiApplication {
 
 		System.out.println(constructorInjectedController.getGreeting());
 
-
-
-		String s1 = "abc";
-
-		String s2 = new String("abc").intern();
 
 
 
